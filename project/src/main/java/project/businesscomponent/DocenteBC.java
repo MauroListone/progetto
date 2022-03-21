@@ -26,6 +26,14 @@ public class DocenteBC implements DAOConstants{
 		}
 	}
 	
+	public static ArrayList<Docente> moreThanOne() throws SQLException, NamingException, ClassNotFoundException, IOException {
+		try {
+			return dDAO.moreThanOne(DBAccess.getConnection());
+		} finally {
+			DBAccess.closeConnection();
+		}
+	}
+	
 	public static Docente getDocenteByPK(byte codDocente) throws SQLException, NamingException, ClassNotFoundException, IOException {
 		try {
 			return dDAO.findByPk(DBAccess.getConnection(), codDocente);

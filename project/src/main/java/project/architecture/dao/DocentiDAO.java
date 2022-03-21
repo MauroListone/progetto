@@ -49,7 +49,24 @@ public class DocentiDAO implements DAOConstants{
 			docente.setCognome(rs.getString(3));
 			docente.setCv(rs.getString(4));
 			lista.add(docente);
-			System.out.print(docente);
+		}
+		return lista;
+	}
+	
+	public ArrayList<Docente> moreThanOne(Connection conn) throws SQLException {
+		stmt = conn.createStatement(
+				ResultSet.TYPE_SCROLL_INSENSITIVE,
+				ResultSet.CONCUR_READ_ONLY);
+		rs = stmt.executeQuery(SELECT_DOCENTE_MORE_CORSO);
+		ArrayList<Docente> lista = new ArrayList<Docente>();
+		rs.beforeFirst();
+		while(rs.next()) {
+			Docente docente = new Docente();
+			docente.setCodDocente(rs.getByte(1));
+			docente.setNome(rs.getString(2));
+			docente.setCognome(rs.getString(3));
+			docente.setCv(rs.getString(4));
+			lista.add(docente);
 		}
 		return lista;
 	}
