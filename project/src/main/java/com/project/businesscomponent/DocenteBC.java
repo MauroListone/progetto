@@ -1,4 +1,4 @@
-package project.businesscomponent;
+package com.project.businesscomponent;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
-import project.architecture.dao.DAOConstants;
-import project.architecture.dao.DocentiDAO;
-import project.architecture.dbaccess.DBAccess;
-import project.businesscomponent.model.Docente;
+import com.project.architecture.dao.DAOConstants;
+import com.project.architecture.dao.DocentiDAO;
+import com.project.architecture.dbaccess.DBAccess;
+import com.project.businesscomponent.model.Docente;
 
 public class DocenteBC implements DAOConstants{
 	private static DocentiDAO dDAO;

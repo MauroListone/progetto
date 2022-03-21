@@ -1,4 +1,4 @@
-package project.architecture.dao;
+package com.project.architecture.dao;
 
 public interface DAOConstants {
 	public static String SELECT_DOCENTI = "Select * from docente";

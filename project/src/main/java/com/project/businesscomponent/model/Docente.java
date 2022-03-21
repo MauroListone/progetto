@@ -1,4 +1,4 @@
-package project.businesscomponent.model;
+package com.project.businesscomponent.model;
 
 public class Docente {
 	private byte codDocente;

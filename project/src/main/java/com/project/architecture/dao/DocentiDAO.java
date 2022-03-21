@@ -1,4 +1,4 @@
-package project.architecture.dao;
+package com.project.architecture.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import project.businesscomponent.model.Docente;
+import com.project.businesscomponent.model.Docente;
 
 public class DocentiDAO implements DAOConstants{
 	private Statement stmt;

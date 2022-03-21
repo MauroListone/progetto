@@ -1,4 +1,4 @@
-package project.architecture.dbaccess;
+package com.project.architecture.dbaccess;
 
 import java.io.IOException;
 import java.io.InputStream;
