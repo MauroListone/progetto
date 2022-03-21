@@ -1,0 +1,35 @@
+nav {
+	width: 100%;
+	min-height: 3em;
+	background-color: #333;
+	color: #fff;
+}
+
+footer {
+	width: 100%;
+	min-height: 200px;
+	margin-top: 2em;
+	background-color: #333;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+footer ul.lista-nomi {
+	list-style-type: none;
+}
+
+footer ul.lista-nomi li {
+	padding: 0.8em 1.5em;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+nav a.navbar-brand.group {
+	color: #fff;
+}
+
+a:focus, a:hover {
+	color: #09b;
+}
