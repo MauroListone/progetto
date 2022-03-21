@@ -1,1 +1,1 @@
---Admin 
+delete table admin cascade constraint;
