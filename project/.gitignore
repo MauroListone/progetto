@@ -1,1 +1,7 @@
 /build/
+
+/src/test/
+/src/main/webapp/SQL/
+
+project/.settings
+.project
