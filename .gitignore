@@ -1,1 +1,5 @@
 /.project
+/src/.project
+
+project/.classpath
+project/.settings

@@ -1,7 +1,8 @@
 /build/
 
 /src/test/
-/src/main/webapp/SQL/
+/SQL/
 
 project/.settings
+project/.classpath
 .project
