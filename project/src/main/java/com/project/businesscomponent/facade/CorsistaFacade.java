@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import com.project.architecture.dao.DAOException;
 import com.project.businesscomponent.CorsistaBC;
+import com.project.businesscomponent.CorsoBC;
 import com.project.businesscomponent.model.Corsista;
+import com.project.businesscomponent.model.Corso;
 
 
 //Nella facade implemento il singleton
@@ -31,5 +33,19 @@ public class CorsistaFacade {
 		CorsistaBC aBC = new CorsistaBC();
 		return aBC.getCorsisti(); 
 	}
+
+	public void createCorsista(Corsista corsista) 
+			throws DAOException, ClassNotFoundException, IOException {
+		CorsistaBC cBC = new CorsistaBC();
+		cBC.create(corsista);
+	}
+	
+	public Corso[] getCorsi() 
+			throws DAOException, ClassNotFoundException, IOException {
+		CorsoBC cBC = new CorsoBC();
+		return cBC.getCorsi(); 
+	}
+
+	
 
 }

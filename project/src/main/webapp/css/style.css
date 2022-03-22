@@ -20,9 +20,10 @@ footer ul.lista-nomi {
 }
 
 footer ul.lista-nomi li {
-	padding: 0.8em 1.5em;
+	padding: 5px;
 	color: #fff;
 	font-size: 1.2em;
+	display: block;
 }
 
 nav a.navbar-brand.group {

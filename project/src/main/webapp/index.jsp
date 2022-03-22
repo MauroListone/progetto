@@ -18,7 +18,7 @@
 		<form action="/<%= application.getServletContextName()%>/controllo" method="post" class="form-horizontal" id="adminForm">
 			<!-- NOME -->
 			<div class="form-group">
-				<label class="control-label">Nome</label>
+				<label class="control-label ">Nome</label>
 				<div class="inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon">

@@ -42,11 +42,14 @@
 							<td><%= c[i].getNomecorsista() %></td>
 							<td><%= c[i].getCognomecorsista() %></td>
 						</tr>
+						
 						<%
 							}
 						%>
 					</tbody>
 				</table>
+				
+				
 			</div>
 		</div>
 		<%
@@ -54,7 +57,26 @@
 		response.sendRedirect("accessonegato.jsp");
 	}
 	%>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel-body">
+				<a href="/<%= application.getServletContextName()%>/redirect?page=newCorsista" class="btn btn-success">Inserisci corsista</a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel-body">
+				<form action="/<%= application.getServletContextName()%>/conferma" method="post">
+				<button type="submit" class="btn btn-primary">visualizza statistiche</button></form>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel-body">
+				<a class="btn btn-danger" href="/<%= application.getServletContextName()%>/redirect?page=eliminaCorsi" class="btn btn-success">Elimina Corsi</a>
+			</div>
+		</div>
+	</div>
 </div>
+
 <%@ include file="footer.html" %>
 </body>
 </html>
