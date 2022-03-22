@@ -10,7 +10,8 @@ public interface DAOConstants {
 	String SELECT_CORSISTA_BY_PK = "Select * from corsista where codcorsista = ?";
 	String DELETE_CORSISTA = "Delete from corsista where codcorsista = ?";
 	
-	String UPDATE_CORSISTA = "Update corsista set nomecorsista = ?, cognomecorsista = ? where codcorsista = ?";
+	String UPDATE_CORSISTA = "Update corsista set nomecorsista = ?, cognomecorsista = ?, precedentiformativi= ? "
+								+ "where codcorsista = ?";
 	
 	String SELECT_NOMEADMIN = "Select nomeadmin from admin where nomeadmin = ?";
 	String SELECT_COGNOMEADMIN = "Select cognomeadmin from admin where cognomeadmin = ?";
@@ -36,6 +37,7 @@ public interface DAOConstants {
 			+ "order by count(d.coddocente) desc "
 			+ "fetch first 1 rows only";
 	String SELECT_CORSO_SEQ = "Select corso_seq.nextval from dual";
+	String SELECT_CORSISTA_SEQ = "Select corsista_seq.nextval from dual";
 	String SELECT_CORSO_MAX_FREQUENZA = "select * "
 			+ "from corso "
 			+ "order by postidisponibili asc "

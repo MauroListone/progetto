@@ -6,10 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.project.architecture.dao.DAOConstants;
 import com.project.architecture.dao.DAOException;
 import com.project.architecture.dbaccess.DBAccess;
 
-public class CorsistaIdGenerator implements IdGeneratorInterface{
+public class CorsistaIdGenerator implements IdGeneratorInterface, DAOConstants {
 
 	private static CorsistaIdGenerator istanza;
 	private Connection conn;
@@ -39,18 +40,15 @@ public class CorsistaIdGenerator implements IdGeneratorInterface{
 	 
 	 @Override
 		public long getNextId() throws ClassNotFoundException, DAOException, IOException  {
-			
-			long id =0;
+			long id = 0;
 			try {
 				stmt = conn.createStatement();
-				//rs = stmt.executeQuery(SELECT_ARTICOLO_SEQ);
-				//leggo il valore, per farlo devo fare per forza next almeno una volta
+				rs = stmt.executeQuery(SELECT_CORSISTA_SEQ);
 				rs.next();
 				id = rs.getLong(1);
-			} catch (SQLException sql) {
+			} catch(SQLException sql){
 				throw new DAOException(sql);
 			}
 			return id;
-			//questo valore ci serve per ottenere i valori delle sequenze dal db per l'ordine
 		}
 }

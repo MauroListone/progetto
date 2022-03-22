@@ -54,10 +54,10 @@ public class CorsistaDAO implements GenericDAO<Corsista>, DAOConstants{
 	public void update(Connection conn, Corsista entity) throws DAOException {
 		try { 
 			  PreparedStatement ps = conn.prepareStatement(UPDATE_CORSISTA); 
-			  ps.setLong(4, entity.getCodcorsista());
 			  ps.setString(1, entity.getNomecorsista()); 
 			  ps.setString(2, entity.getCognomecorsista());
 			  ps.setString(3, entity.getPrecedentiformativi()); 
+			  ps.setLong(4, entity.getCodcorsista());
 			  ps.execute();
 			  conn.commit();
 			  }catch (SQLException sql) { 
