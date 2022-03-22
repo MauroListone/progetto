@@ -11,6 +11,7 @@ public class Corso {
 	private String commentiCorso;
 	private String aulaCorso;
 	private long codDocente;
+	private int postiDisponibili;
 	
 	public long getCodCorso() {
 		return codCorso;
@@ -60,10 +61,17 @@ public class Corso {
 	public void setCodDocente(long codDocente) {
 		this.codDocente = codDocente;
 	}	
+	public int getPostiDisponibili() {
+		return postiDisponibili;
+	}
+	public void setPostiDisponibili(int postiDisponibili) {
+		this.postiDisponibili = postiDisponibili;
+	}
 	@Override
 	public String toString() {
 		return "Corso [codCorso=" + codCorso + ", nomeCorso=" + nomeCorso + ", dataInizioCorso=" + dataInizioCorso
 				+ ", dataFineCorso=" + dataFineCorso + ", costoCorso=" + costoCorso + ", commentiCorso=" + commentiCorso
-				+ ", aulaCorso=" + aulaCorso + "]";
+				+ ", aulaCorso=" + aulaCorso + ", codDocente=" + codDocente + ", postiDisponibili=" + postiDisponibili
+				+ "]";
 	}
 }

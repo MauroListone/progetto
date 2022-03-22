@@ -12,9 +12,6 @@ public interface DAOConstants {
 	
 	String UPDATE_CORSISTA = "Update corsista set nomecorsista = ? , cognomecorsista = ? where codcorso = ?";
 	
-	
-	String DURATA_MEDIA = "Select avg(datafinecorso-datainiziocorso) from corso";
-	
 	String SELECT_NOMEADMIN = "Select nomeadmin from admin where nomeadmin = ?";
 	String SELECT_COGNOMEADMIN = "Select cognomeadmin from admin where cognomeadmin = ?";
 	String SELECT_CODADMIN = "Select codadmin from admin where codadmin = ?";
@@ -22,9 +19,10 @@ public interface DAOConstants {
 	String SELECT_CORSO = "Select * from corso";
 	String DELETE_CORSO = "Delete from corso where codcorso = ?";
 	String UPDATE_CORSO = "Update corso set nomecorso = ?, datainiziocorso = ?, datafinecorso = ?, "
-			+ "costocorso = ?, commenticorso = ?, aulacorso = ?, coddocente = ?";
+			+ "costocorso = ?, commenticorso = ?, aulacorso = ?, coddocente = ?, postidisponibili = ? "
+			+ "where codcorso = ?";
 	String SELECT_CORSO_BYCOD = "Select * from corso where codcorso = ?";
-	String SELECT_ULTIMO_CORSO = "select datainizio corso, nomecorso "
+	String SELECT_ULTIMO_CORSO = "select * "
 									+ "from corso "
 									+ "where datainiziocorso = (select max(datainiziocorso) "
 									+ "from corso)";
@@ -37,4 +35,10 @@ public interface DAOConstants {
 			+ "having count(d.coddocente) > 1 "
 			+ "order by count(d.coddocente) desc "
 			+ "fetch first 1 rows only";
+	String SELECT_CORSO_SEQ = "Select corso_seq.nextval from dual";
+	String SELECT_CORSO_MAX_FREQUENZA = "select * "
+			+ "from corso "
+			+ "order by postidisponibili asc "
+			+ "fetch first 1 rows only";
+	String SELECT_CORSI_POSTI_DISPONIBILI = "select * from corso where postidisponibili > 0";
 }
