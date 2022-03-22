@@ -4,16 +4,17 @@ public class CorsoCorsista {
 	
 	private int codcorso;
 	private int codcorsista;
-	public int getCodcorso() {
+	
+	public int getCodCorso() {
 		return codcorso;
 	}
-	public void setCodcorso(int codcorso) {
+	public void setCodCorso(int codcorso) {
 		this.codcorso = codcorso;
 	}
-	public int getCodcorsista() {
+	public int getCodCorsista() {
 		return codcorsista;
 	}
-	public void setCodcorsista(int codcorsista) {
+	public void setCodCorsista(int codcorsista) {
 		this.codcorsista = codcorsista;
 	}
 	@Override

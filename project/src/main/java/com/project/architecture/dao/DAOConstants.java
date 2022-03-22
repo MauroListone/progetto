@@ -43,4 +43,6 @@ public interface DAOConstants {
 			+ "order by postidisponibili asc "
 			+ "fetch first 1 rows only";
 	String SELECT_CORSI_POSTI_DISPONIBILI = "select * from corso where postidisponibili > 0";
+	
+	String SELECT_CORSO_CORSISTA = "select * from corso_corsista";
 }
