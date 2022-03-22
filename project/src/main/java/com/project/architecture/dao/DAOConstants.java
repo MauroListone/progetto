@@ -10,7 +10,7 @@ public interface DAOConstants {
 	String SELECT_CORSISTA_BY_PK = "Select * from corsista where codcorsista = ?";
 	String DELETE_CORSISTA = "Delete from corsista where codcorsista = ?";
 	
-	String UPDATE_CORSISTA = "Update corsista set nomecorsista = ? , cognomecorsista = ? where codcorso = ?";
+	String UPDATE_CORSISTA = "Update corsista set nomecorsista = ?, cognomecorsista = ? where codcorsista = ?";
 	
 	String SELECT_NOMEADMIN = "Select nomeadmin from admin where nomeadmin = ?";
 	String SELECT_COGNOMEADMIN = "Select cognomeadmin from admin where cognomeadmin = ?";
