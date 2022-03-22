@@ -15,11 +15,7 @@
 	<div class="page-header">
 		<h1>Gruppo Torino</h1>
 	</div>
-	<%
-	String admin = (String) session.getAttribute("codadmin");
-	if(admin == null) {
-		%>
-		<form action="" method="post" class="form-horizontal" id="adminForm">
+		<form action="/<%= application.getServletContextName()%>/controllo" method="post" class="form-horizontal" id="adminForm">
 			<!-- NOME -->
 			<div class="form-group">
 				<label class="control-label">Nome</label>
@@ -28,7 +24,7 @@
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-user"></i>
 						</span>
-						<input type="text" name="nome" id="adminNome" placeholder="Nome" class="form-control">
+						<input type="text" name="nomeadmin" id="adminNome" placeholder="Nome" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -40,7 +36,7 @@
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-user"></i>
 						</span>
-						<input type="text" name="cognome" id="adminCognome" placeholder="Cognome" class="form-control">
+						<input type="text" name="cognomeadmin" id="adminCognome" placeholder="Cognome" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -52,7 +48,7 @@
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-lock"></i>
 						</span>
-						<input type="text" name="codice" id="adminCodice" placeholder="Codice" class="form-control">
+						<input type="text" name="codadmin" id="adminCodice" placeholder="Codice" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -63,9 +59,6 @@
 				</button>
 			</div>
 		</form>
-		<%
-	}
-	%>
 </div>
 <%@ include file="footer.html" %>
 </body>

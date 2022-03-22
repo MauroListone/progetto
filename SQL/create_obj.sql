@@ -2,7 +2,7 @@
 create table admin(
 nomeadmin varchar2(30) not null,
 cognomeadmin varchar2(30) not null,
-codadmin int primary key);
+codadmin varchar2(30) primary key);
 
 --docente
 
